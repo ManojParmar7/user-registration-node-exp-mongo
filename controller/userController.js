@@ -1,5 +1,5 @@
 const Models = require("../models/user")
-const { CREATED, INTERNAL_SERVER_ERROR, SERVER_ERROR, OK, BAD_REQUEST_MESSAGE, NOT_FOUND, USER_RECORD_NOT_EXIST, USERS_FOUND, USER_UPDATED, USER_DELETED, CANNOT_DELETE_USER } = require("../constants/constants");
+const { CREATED, INTERNAL_SERVER_ERROR, SERVER_ERROR, OK, BAD_REQUEST_MESSAGE, NOT_FOUND, USER_RECORD_NOT_EXIST, USERS_FOUND, USER_UPDATED, USER_DELETED, CANNOT_DELETE_USER, DUPLICATE_ERROR } = require("../constants/constants");
 const { sendResponse } = require("../helpers/index");
 
 const { validationResult } = require("express-validator");
@@ -33,7 +33,7 @@ module.exports.createUser = async (req, res, next) => {
           });
         let users = await Models.findOne({number})
         if(users) {
-            res.status(200).json({status : false, message : "User is already exist"})
+            res.status(200).json({status : false, message : DUPLICATE_ERROR})
         } else { 
         
             await user.save();
