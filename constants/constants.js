@@ -13,6 +13,8 @@ module.exports = {
     NO_RECORD_FOUND: "No record found!",
     RECORD_NOT_EXIST: "Record does not exist!",
     USER_NOT_FOUND: "Player not found",
+    USER_CREATE: "Record created successfully",
+
       
               
   

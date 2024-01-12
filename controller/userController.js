@@ -41,7 +41,7 @@ module.exports.createUser = async (req, res, next) => {
 
                 return res
                 .status(CREATED)
-                .json(sendResponse({ user: user }, CREATED, CREATED))
+                .json(sendResponse({ user: user }, CREATED, USER_CREATE))
             }
             }
 
