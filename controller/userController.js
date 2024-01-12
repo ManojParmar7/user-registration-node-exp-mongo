@@ -1,5 +1,5 @@
 const Models = require("../models/user")
-const { CREATED, INTERNAL_SERVER_ERROR, SERVER_ERROR, OK, BAD_REQUEST_MESSAGE, NOT_FOUND, USER_RECORD_NOT_EXIST, USERS_FOUND, USER_UPDATED, USER_DELETED, CANNOT_DELETE_USER, DUPLICATE_ERROR } = require("../constants/constants");
+const { CREATED, INTERNAL_SERVER_ERROR, SERVER_ERROR, OK,USER_CREATE, BAD_REQUEST_MESSAGE, NOT_FOUND, USER_RECORD_NOT_EXIST, USERS_FOUND, USER_UPDATED, USER_DELETED, CANNOT_DELETE_USER, DUPLICATE_ERROR } = require("../constants/constants");
 const { sendResponse } = require("../helpers/index");
 
 const { validationResult } = require("express-validator");
